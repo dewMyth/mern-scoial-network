@@ -2,12 +2,18 @@ import React from "react";
 import { Person, Search, Chat, Notifications } from "@material-ui/icons";
 import "./NavBar.css";
 
+import { Link } from "react-router-dom";
+
 const NavBar = () => {
   return (
     <>
       <div className="topbarContainer">
         <div className="topbarLeft">
-          <span className="logo">The Social App</span>
+          <span className="logo">
+            <Link className="link" to="/">
+              The Social App
+            </Link>
+          </span>
         </div>
         <div className="topbarCenter">
           <div className="searchbar">
@@ -38,12 +44,13 @@ const NavBar = () => {
               <span className="topbarIconBadge">1</span>
             </div>
           </div>
-
-          <img
-            src="/assets/person/1.jpg"
-            alt=""
-            className="topbarProfilePicture"
-          />
+          <Link to="/profile">
+            <img
+              src="/assets/person/1.jpg"
+              alt=""
+              className="topbarProfilePicture"
+            />
+          </Link>
         </div>
       </div>
     </>
