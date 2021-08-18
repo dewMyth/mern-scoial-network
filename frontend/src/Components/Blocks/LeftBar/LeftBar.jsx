@@ -12,6 +12,7 @@ import {
 } from "@material-ui/icons";
 
 import "./LeftBar.css";
+import CloseFriends from "../CloseFriends/CloseFriends";
 
 const LeftBar = () => {
   return (
@@ -58,48 +59,7 @@ const LeftBar = () => {
           </ul>
           <button className="leftbarButton">Show More</button>
           <hr className="leftbarHr" />
-          <ul className="leftbarFriendList">
-            <li className="leftbarFriend">
-              <img
-                src="/assets/person/1.jpg"
-                alt=""
-                className="leftbarFriendImg"
-              />
-              <span className="leftbarFriendName">Dewmith Akalanka</span>
-            </li>
-            <li className="leftbarFriend">
-              <img
-                src="/assets/person/1.jpg"
-                alt=""
-                className="leftbarFriendImg"
-              />
-              <span className="leftbarFriendName">Dewmith Akalanka</span>
-            </li>
-            <li className="leftbarFriend">
-              <img
-                src="/assets/person/1.jpg"
-                alt=""
-                className="leftbarFriendImg"
-              />
-              <span className="leftbarFriendName">Dewmith Akalanka</span>
-            </li>
-            <li className="leftbarFriend">
-              <img
-                src="/assets/person/1.jpg"
-                alt=""
-                className="leftbarFriendImg"
-              />
-              <span className="leftbarFriendName">Dewmith Akalanka</span>
-            </li>
-            <li className="leftbarFriend">
-              <img
-                src="/assets/person/1.jpg"
-                alt=""
-                className="leftbarFriendImg"
-              />
-              <span className="leftbarFriendName">Dewmith Akalanka</span>
-            </li>
-          </ul>
+          <CloseFriends />
         </div>
       </div>
     </>
