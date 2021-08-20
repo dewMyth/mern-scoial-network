@@ -8,6 +8,8 @@ import LeftBar from "../../Blocks/LeftBar/LeftBar";
 import RightBar from "../../Blocks/RightBar/RightBar";
 
 const Profile = () => {
+  const public_folder = process.env.REACT_APP_PUBLIC_FOLDER;
+
   return (
     <>
       <NavBar />
@@ -18,12 +20,12 @@ const Profile = () => {
             <div className="profileCover">
               <img
                 className="profileCoverImg"
-                src="/assets/post/1.jpg"
+                src={public_folder + "post/1.jpg"}
                 alt=""
               />
               <img
                 className="profileUserImg"
-                src="/assets/person/2.png"
+                src={public_folder + "person/2.png"}
                 alt=""
               />
             </div>

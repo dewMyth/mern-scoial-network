@@ -3,16 +3,22 @@ import Online from "../Online/Onlne";
 import "./RightBar.css";
 
 const RightBar = () => {
+  const public_folder = process.env.REACT_APP_PUBLIC_FOLDER;
+
   const HomeRightbar = () => {
     return (
       <>
         <div className="birthdayContainer">
-          <img className="birthdayImg" src="assets/gift.png" alt="" />
+          <img
+            className="birthdayImg"
+            src={public_folder + "gift.png"}
+            alt=""
+          />
           <span className="birthdayText">
             <b>Pola Foster</b> and <b>3 other friends</b> have a birhday today.
           </span>
         </div>
-        <img className="rightbarAd" src="assets/ad.png" alt="" />
+        <img className="rightbarAd" src={public_folder + "ad.png"} alt="" />
         <h4 className="rightbarTitle">Online Friends</h4>
         <ul className="rightbarFriendList">
           <Online />
