@@ -26,11 +26,26 @@ router.put("/update/:id", async (req, res) => {
   }
 });
 
-//Retrieve a user
+//Retrieve a user (get user by User._id)
 router.get("/view/:id", (req, res) => {
   User.findById(req.params.id)
     .then((user) => res.json(user))
     .catch((err) => res.status(400).json("User not found !"));
+});
+
+//Get a user by req.query ((get user by User._id or User.username))
+
+router.get("/", async (req, res) => {
+  const userId = req.query.userId;
+  const username = req.query.username;
+  try {
+    const user = userId
+      ? await User.findById(userId)
+      : await User.findOne({ username: username });
+    return res.status(200).json(user);
+  } catch (err) {
+    return res.status(500).json(err);
+  }
 });
 
 //Delete a user
